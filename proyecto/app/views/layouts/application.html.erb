@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UniAmiga</title>
+    <title>UAmigas</title>
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   </head>
 
   <body>
-    <%= yield %>
-	 <p class="notice"><%= notice %></p>
-	 <p class="alert"><%= alert %></p>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %> alert-dismissable">
+        <button type="button" class="close" data-sismiss="alert" aria-hidden="true">x</button>
+        <%= value %>
+      </div>
+    <% end %>
 
+    <%= yield %>
+
+    <% if current_user %>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Login', new_user_session_path %>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <script src="/assets/javascripts/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   </body>
 </html>
