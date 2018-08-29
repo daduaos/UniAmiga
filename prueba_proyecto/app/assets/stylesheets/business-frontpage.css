@@ -1,0 +1,54 @@
+/*!
+ * Start Bootstrap - Busines Frontpage (https://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.business-header {
+  height: 50vh;
+  min-height: 300px;
+  background: url('http://placehold.it/1920x400') center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.card {
+  height: 100%;
+}
+
+
+/* custom */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+	color:#1088FF;
+}
+.bg-dark {
+    background-color: #16283a !important;
+}
+.navbar{
+	background: #2E577F !important;
+    border-bottom: 4px solid #6aa318 ;
+}
+.navbar-brand{
+	padding:  .5rem 0;
+}
+.nav-link {
+    padding: .9rem 1rem;
+}
+.navbar-dark .navbar-nav .active>.nav-link{
+	background: #6aa318 !important;
+}
+.btn-success{
+	background: #6aa318;
+}
