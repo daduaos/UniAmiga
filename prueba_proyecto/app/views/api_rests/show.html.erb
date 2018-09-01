@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @api_rest.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @api_rest.body %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @api_rest.count %>
+</p>
+
+<%= link_to 'Edit', edit_api_rest_path(@api_rest) %> |
+<%= link_to 'Back', api_rests_path %>

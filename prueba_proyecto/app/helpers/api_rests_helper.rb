@@ -1,0 +1,2 @@
+module ApiRestsHelper
+end

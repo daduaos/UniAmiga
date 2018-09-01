@@ -1,0 +1,32 @@
+<%= form_with(model: api_rest, local: true) do |form| %>
+  <% if api_rest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(api_rest.errors.count, "error") %> prohibited this api_rest from being saved:</h2>
+
+      <ul>
+      <% api_rest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :count %>
+    <%= form.number_field :count %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
