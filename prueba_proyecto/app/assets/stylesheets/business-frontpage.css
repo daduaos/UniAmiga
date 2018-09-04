@@ -17,6 +17,7 @@ body {
 .business-header {
   height: 50vh;
   min-height: 300px;
+  width: 100%;
   background: url('Uni.jpg') center center no-repeat scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
