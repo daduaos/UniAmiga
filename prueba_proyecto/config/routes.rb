@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  #REST Resource
-  resources :articles
 
   root 'home#index'
+
+   
+  #REST Resource
+  resources :articles
+  devise_for :users
 
   get 'index' => 'home#index'
   get 'quienes' => 'home#quienes'
